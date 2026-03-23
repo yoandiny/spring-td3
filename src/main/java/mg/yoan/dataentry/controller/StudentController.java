@@ -16,9 +16,12 @@ public class StudentController {
     private List<StudentRequest> StudentList = new ArrayList<>();
 
     @PostMapping
-    public String students(@RequestBody StudentRequest studentRequest) {
+    public ResponseEntity<?> students(@RequestBody StudentRequest studentRequest) {
         StudentList.add(studentRequest);
-        return "First name :" + studentRequest.getFirstName() + " Last name :" + studentRequest.getLastName();
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body("Created Successfully");
 
     }
 

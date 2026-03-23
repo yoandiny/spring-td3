@@ -11,7 +11,7 @@ public class WelcomeController {
 
     @GetMapping("/welcome")
     public ResponseEntity<?> welcome(@RequestParam String name) {
-        if(name == null || name.isEmpty()) {g
+        if(name == null || name.isEmpty()) {
             return ResponseEntity
                     .status(HttpStatus.UNAUTHORIZED)
                     .body("Unauthorized");
