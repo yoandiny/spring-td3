@@ -1,0 +1,22 @@
+package mg.yoan.dataentry.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+    @GetMapping("/welcome")
+    public ResponseEntity<?> welcome(@RequestParam String name) {
+        if(name == null || name.isEmpty()) {g
+            return ResponseEntity
+                    .status(HttpStatus.UNAUTHORIZED)
+                    .body("Unauthorized");
+
+        }
+        return ResponseEntity.ok("Welcome, " + name + "!");
+    }
+}

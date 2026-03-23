@@ -1,13 +1,13 @@
-package mg.yoan.td3;
+package mg.yoan.dataentry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Td3ApplicationTests {
+class DataEntryApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
